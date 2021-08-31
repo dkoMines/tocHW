@@ -1,0 +1,78 @@
+\ProvidesPackage{ntdcourse}
+
+
+
+
+%%%%%%%%%%%%%%%%%
+%% Course Data %%
+%%%%%%%%%%%%%%%%%
+
+\newcommand{\coursecode}{CSCI-561}
+\newcommand{\coursename}{Theory of Computation}
+\newcommand{\shortcoursename}{Theory}
+
+\newcommand{\theterm}{Fall 2021}
+\newcommand{\thetermstart}{24/08/2021}
+\date{\theterm}
+
+%\newcommand{\urlbase}{http://www.neil.dantam.name/csci-561}
+\newcommand{\urlbase}{http://www.mines.edu/\string~ndantam/csci-561}
+\newcommand{\onedriveurl}{https://mines0-my.sharepoint.com/:f:/r/personal/ndantam_mines_edu/Documents/csci-561/csci561-f21}
+
+\newcommand{\wwwref}[2]{\href{\urlbase/#1}{#2}}
+\newcommand{\onedriveref}[2]{\href{\onedriveurl/#1}{#2}}
+
+\newcommand{\courseinstructor}{Dr. Neil T. Dantam}
+\newcommand{\shortcourseinstructor}{Dantam}
+
+\newcommand{\courseinstitute}{Colorado School of Mines}
+\newcommand{\shortcourseinstitute}{Mines}
+
+%\def\courseta{Sihui Li}
+
+\newcommand{\thecourse}{\coursecode}
+
+
+\renewcommand{\tokenleft}[0]{\textrm{``}}
+\renewcommand{\tokenright}[0]{\textrm{''}}
+
+
+%%%%%%%%%%%%%%
+%% Lectures %%
+%%%%%%%%%%%%%%
+
+\newcommand{\deflec}[3]{
+  \expandafter \newcommand\csname lec@#2@num\endcsname{#1}%
+  \expandafter \newcommand\csname lec@#2@title\endcsname{#3}%
+}
+
+\newcommand{\lectitle}[1]{\expandafter\csname  lec@#1@title\endcsname}
+\newcommand{\lecnum}[1]{\expandafter\csname  lec@#1@num\endcsname}
+
+\newcommand{\thelecnum}[0]{\lecnum{\theleccode}}
+\newcommand{\thelectitle}[0]{\lectitle{\theleccode}}
+
+
+\deflec{00}{theory-intro}{Introduction to Theory of Computation}
+\deflec{01}{math-review}{Math Review}
+\deflec{02}{lisp}{Symbolic Computation and Common Lisp}
+\deflec{03}{lisp-func}{Functional Programming in Lisp}
+\deflec{04}{fa}{Finite Automata}
+\deflec{05}{subset}{Subset Construction}
+\deflec{06}{regex}{Regular Expressions}
+\deflec{07}{myt}{McNaughton-Yamada-Thompson Algorithm}
+\deflec{08}{reg-decision}{Regular Decision Properties}
+\deflec{09}{pl}{Pumping Lemma}
+\deflec{10}{reg-closure}{Regular Closure Properties}
+\deflec{11}{min}{Finite Automata Minimization}
+\deflec{12}{des}{Application: Discrete Event Systems}
+\deflec{13}{sat}{Boolean Satisfiability}
+\deflec{14}{satplan}{Application: SATPlan}
+\deflec{15}{grammar}{Grammars}
+\deflec{16}{pda}{Pushdown Automata}
+\deflec{17}{cfl-pl}{Pumping Lemma for Context-Free Languages}
+\deflec{18}{cfl}{Context-Free Languages}
+\deflec{19}{parsing}{Application: Parsing}
+\deflec{20}{tm}{Turing Machines}
+\deflec{21}{dec}{Decidability}
+\deflec{22}{cmpl}{Complexity}
